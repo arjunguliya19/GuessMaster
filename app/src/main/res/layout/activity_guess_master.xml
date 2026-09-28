@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Author: Arjun Guliya -->
+
+<!-- Linear Layout with Vertical Orientation-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".GuessMaster">
+
+    <!-- Header -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#534082"
+        android:text="Guess Master"
+        android:textColor="@android:color/white"
+        android:gravity="start"
+        android:textSize="30sp"
+        android:padding="15dp"/>
+
+    <!-- TextView Displays Tickets -->
+    <TextView
+        android:id="@+id/ticket"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="Total Tickets: 0"
+        android:textSize="20sp" />
+
+    <!-- ImageView Displays Entity's Image -->
+    <ImageView
+        android:id="@+id/entityImage"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:contentDescription="@drawable/nameing"
+        android:visibility="visible"
+        tools:visibility="visible" />
+
+    <!-- TextView Displays Entity's Name -->
+    <TextView
+        android:id="@+id/entityName"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:text="Entity Name"
+        android:textSize="24sp" />
+
+    <!-- EditText To Allow User To Enter Their Guess -->
+    <EditText
+        android:id="@+id/guessinput"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:gravity="bottom|center_horizontal"
+        android:hint="MM/DD/YYYY" />
+
+    <!-- TableLayout With 1 Row and 2 Columns For 2 Buttons -->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*">
+
+        <TableRow>
+            <!-- Button To Submit Guess -->
+            <Button
+                android:id="@+id/btnGuess"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="SUBMIT GUESS" />
+
+            <!-- Button To Change Entity -->
+            <Button
+                android:id="@+id/btnClear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="CHANGE ENTITY" />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>
